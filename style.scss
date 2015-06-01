@@ -306,10 +306,9 @@ footer {
     text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "_sass/highlights";
-//@import "_sass/svg-icons";
+.entry .highlight{
+    text-indent:0px;
+}
 
 .highlight {
     text-indent:0px;
@@ -327,4 +326,9 @@ footer {
     }
 }
 
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+//@import "_sass/highlights";
+//@import "_sass/svg-icons";
 
