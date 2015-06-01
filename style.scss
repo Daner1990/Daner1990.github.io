@@ -268,6 +268,21 @@ nav {
 
     .entry{
         text-indent:2em;
+        .highlight{
+            text-indent:0px;
+
+            .lineno{
+                color:#CCCCCC;
+                font-weight:bold;
+            }
+
+            code {
+                font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+                font-size: 13px;
+                letter-spacing: 0.015em;
+                line-height: 120%;
+            }
+        }
     }
 
     .comments {
@@ -305,27 +320,6 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-
-.entry .highlight{
-    text-indent:0px;
-}
-
-.highlight {
-    text-indent:0px;
-
-    .lineno{
-        color:#CCCCCC;
-        font-weight:bold;
-    }
-
-    code {
-        font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-        font-size: 13px;
-        letter-spacing: 0.015em;
-        line-height: 120%;
-    }
-}
-
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
