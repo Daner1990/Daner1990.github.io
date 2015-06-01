@@ -313,15 +313,18 @@ footer {
 
 .highlight {
     text-indent:0px;
+
+    .lineno{
+        color:#CCCCCC;
+        font-weight:bold;
+    }
+
+    code {
+        font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+        font-size: 13px;
+        letter-spacing: 0.015em;
+        line-height: 120%;
+    }
 }
 
-
-code {
-    font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-    font-size: 13px;
-    letter-spacing: 0.015em;
-    line-height: 120%;
-}
-
-.highlight .lineno{color:#CCCCCC;font-weight:bold;}
 
