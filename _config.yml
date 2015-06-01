@@ -57,7 +57,7 @@ permalink: /:title/
 
 
 # Let the highlighter tools work
-#pygments: true
+pygments: true
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
