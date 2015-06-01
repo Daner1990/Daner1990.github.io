@@ -5,7 +5,8 @@ my_excerpt: Jekyll 自带语法高亮功能，它是由 Pygments 来实现的。
 tags: [tools,yekyll]
 ---
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
+
 def show
   @widget = Widget(params[:id])
   respond_to do |format|
@@ -13,7 +14,18 @@ def show
     format.json { render json: @widget }
   end
 end
+
 {% endhighlight %}
 
+
+{% highlight html linenos %}
+
+<html>
+    <body>
+        <p>Hello World</p>
+    </body>
+</html>
+
+{% endhighlight %}
 
 

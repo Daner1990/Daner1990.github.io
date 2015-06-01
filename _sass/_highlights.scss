@@ -1,19 +1,25 @@
 
 .highlight {
-  background-color: #efefef;
-  padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
-  margin: 20px 0 20px 0;
-  overflow: scroll;
+    background-color: #efefef;
+    padding: 7px 7px 7px 10px;
+    border: 1px solid #ddd;
+    -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px rgba(0,0,0,0.1);
+    margin: 20px 0 20px 0;
+    overflow: scroll;
+    text-indent:0px;
 }
+
 
 code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+    font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+    font-size: 13px;
+    letter-spacing: 0.015em;
+    line-height: 120%;
 }
 
+.highlight .lineno{color:#CCCCCC;font-weight:bold;}
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
