@@ -292,9 +292,6 @@ nav {
         padding:0px 5px;
         color:#FFF;
     }
-
-
-
 }
 
 .wrapper-footer {
@@ -313,3 +310,18 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_sass/highlights";
 @import "_sass/svg-icons";
+
+.highlight {
+    text-indent:0px;
+}
+
+
+code {
+    font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+    font-size: 13px;
+    letter-spacing: 0.015em;
+    line-height: 120%;
+}
+
+.highlight .lineno{color:#CCCCCC;font-weight:bold;}
+
