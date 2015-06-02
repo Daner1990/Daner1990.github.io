@@ -154,8 +154,16 @@ img {
 
 .wrapper-masthead {
     margin-bottom: 50px;
-    //background-image:url('images/bg-light.jpg');
-    //background-repeat:repeat;
+    position:fixed;
+    top:0px;
+    z-index:11;
+    background-image:url('images/bg-light.jpg');
+    background-repeat:repeat;
+    width:100%;
+}
+
+.wrapper-down{
+    box-shadow:0 0 5px #888888;
 }
 
 .masthead {
@@ -245,6 +253,10 @@ nav {
 //
 // .main
 //
+
+#main{
+    position:relative;
+}
 
 .posts > .post {
     padding-bottom: 2em;
