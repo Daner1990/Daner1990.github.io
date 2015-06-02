@@ -256,6 +256,11 @@ nav {
 
 #main{
     position:relative;
+    padding-top:111px;
+
+    @include mobile {
+        padding-top:206px; 
+    }
 }
 
 .posts > .post {
