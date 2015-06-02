@@ -1,34 +1,33 @@
 ---
 layout: post
-title: form/post ajax cros
+title: javascript:跨域问题(下)
 my_excerpt: 同源策略
 ---
 
-同源策略：same-orgin policy
+###同源策略：same-orgin policy
 
-【名词解释】
+>名词解释
+>
+>>跨域：https://developer.mozilla.org/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript
+>>
+>>同源策略（注意Network Access这一节）：http://www.w3.org/Security/wiki/Same_Origin_Policy
 
-跨域：https://developer.mozilla.org/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript
-
-同源策略（注意Network Access这一节）：http://www.w3.org/Security/wiki/Same_Origin_Policy
-
-【问题描述】
-
-浏览器出于安全的考量
-
-（避免恶意网站轻易读取其他网站显示的内容，因为该内容可能含有敏感信息，想象iframe嵌套银行网页）
-
-原则上允许跨域写而限制了跨域读。
-
-写是指数据的上行/发送（sending request），
-
-读是指数据的下行/接收（receiving response）。
-
-（然而跨域写也是很不安全的，容易导致CSRF/clickjacking攻击。
-
-浏览器已经限制了跨域读，再限制跨域写的话，那互联网的每个页面都成了孤岛。
-
-避免非法跨域写需要用到token，本文不做讨论。）
+>问题描述
+>
+>>浏览器出于安全的考量
+>>（避免恶意网站轻易读取其他网站显示的内容，因为该内容可能含有敏感信息，想象iframe嵌套银行网页）
+>>
+>>原则上允许跨域写而限制了跨域读。
+>>
+>>写是指数据的上行/发送（sending request），
+>>
+>>读是指数据的下行/接收（receiving response）。
+>>
+>>（然而跨域写也是很不安全的，容易导致CSRF/clickjacking攻击。
+>>
+>>浏览器已经限制了跨域读，再限制跨域写的话，那互联网的每个页面都成了孤岛。
+>>
+>>避免非法跨域写需要用到token，本文不做讨论。
 
 
 考虑下述情况：
@@ -64,11 +63,18 @@ JSONP属于跨域读，且形式限制为get请求，
 安全隐患（容易受到csrf攻击，csrf的解决必须是post请求配合token使用）。
 
 
-那么，如何实现跨域post请求呢？
+###那么，如何实现跨域post请求呢？
 
-【解决方案】
+>解决方案
+>>1、CORS
+>>
+>>2、invisible iframe
+>>
+>>3、server proxy 
+>>
+>>4、flash proxy
 
-1、CORS
+####1、CORS
 
 概述：Cross-Origin Resource
 
@@ -96,7 +102,7 @@ ie8提供了封装好的XDomainRequest对象，部分实现了该标准；
 
 注意：若在多个iframe之间跨域通信，优先考虑 window.postMessage
 
-2、invisible iframe
+####2、invisible iframe
 
 概述：通过js动态生成不可见表单和iframe，
 
@@ -118,13 +124,13 @@ ie8提供了封装好的XDomainRequest对象，部分实现了该标准；
 
 缺点：依赖hack实现，响应数据量大时需要切片、多次设置fragment并轮询，响应频繁时可能失效。
 
-3、server proxy 
+####3、server proxy 
 
 概述：当前域实现一个代理，所有向外部域名发送的请求都径由该代理中转。
 
 缺点：每个使用方都需要部署代理，数据中转低效，对js有侵入。
 
-4、flash proxy
+####4、flash proxy
 
 概述：利用不可见的swf跨域post提交数据，需要部署crossdomain.xml。例如alirte会自动检测，若用户安装了flash，则以此实现跨域通信。
 
