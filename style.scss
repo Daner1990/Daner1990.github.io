@@ -299,16 +299,16 @@ nav {
     .page-tags{
         list-style:none;
         display:inline-block;
+        li{
+            display:inline-block;
+            list-style:none;
+            background:$lightblue;
+            border-radius:5px;
+            padding:0px 5px;
+            color:#FFF;
+        }
     }
 
-    li{
-        display:inline-block;
-        list-style:none;
-        background:$lightblue;
-        border-radius:5px;
-        padding:0px 5px;
-        color:#FFF;
-    }
 }
 
 .wrapper-footer {
