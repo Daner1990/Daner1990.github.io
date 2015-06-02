@@ -19,7 +19,7 @@ html {
 
 body {
     //background: $yellowwhite;
-    font: 18px/1.4 $helvetica;
+    font: 16px/1.4 $helvetica;
     color: $darkGray;
     background-image:url('images/bg.png');
     background-repeat:repeat;
@@ -275,12 +275,12 @@ nav {
 
 .post {
     blockquote {
-        margin: 1.8em .8em;
+        //margin: 1.8em .8em;
         border-left: 2px solid $gray;
         padding: 0.1em 1em;
         color: $gray;
-        font-size: 22px;
-        font-style: italic;
+        font-size: 15px;
+        //font-style: italic;
     }
 
     .entry{

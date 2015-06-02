@@ -1,21 +1,27 @@
 ---
 layout: post
-title: invocation 调用指令
+title: 调用指令:对apply/call/bind的理解
 my_excerpt: javascript中函数调用方法，具体内部是怎么实现调用的呢，对call,apply,bind的理解
 ---
 
-<h1>Function Invocation</h1>
+####Function Invocation
+
+{% highlight javascript linenos %}
 
     function hello(thing) 
-        { 
-            console.log(this + " says hello " + thing);
-        }
-    
+    { 
+        console.log(this + " says hello " + thing);
+    }
+
     hello.call("Yehuda", "world") 
+
     //=> Yehuda says hello world  
 
+{% endhighlight %}
 
-<h2>简单的函数调用</h2>
+####简单的函数调用
+
+{% highlight javascript linenos %}
 
     function hello(thing) {  
         console.log("Hello " + thing);
@@ -30,14 +36,18 @@ my_excerpt: javascript中函数调用方法，具体内部是怎么实现调用�
     // es5 严格模式下等价于
     hello.call(undefined,'world');
 
+{% endhighlight %}
 
-a function invocation like fn(...args) is the same as fn.call(window [ES5-strict: undefined], ...args).
+#### 函数指令的理解(function invocation)
 
-(function() {})() is the same as (function() {}).call(window [ES5-strict: undefined).
+>一个函数指令例如：fn(...args) 等价于 fn.call(window [ES5-strict: undefined], ...args).
+>
+>匿名函数(function() {})() 等价于 (function(){}).call(window [ES5-strict: undefined).
 
 
-<h2>方法调用</h2>
+####方法调用
 
+{% highlight javascript linenos %}
     var person = {  
         name: "Brendan Eich",
         hello: function(thing) {
@@ -50,12 +60,14 @@ a function invocation like fn(...args) is the same as fn.call(window [ES5-strict
 
     // 等价于desugars to this:
     person.hello.call(person, "world");  
+
+{% endhighlight %}
     
-<h2>Using Function.prototype.bind</h2>
+#### 使用 Function.prototype.bind
 
-Because it can sometimes be convenient to have a reference to a function with a persistent this value, 
+有时为了方便对函数中的常量进行引用
 
-people have historically used a simple closure trick to convert a function into one with an unchanging this:
+{% highlight javascript linenos %}
 
     var person = {  
         name: "Brendan Eich",
@@ -63,7 +75,15 @@ people have historically used a simple closure trick to convert a function into 
             console.log(this.name + " says hello " + thing);
         }
     }
-    var boundHello = function(thing) { return person.hello.call(person, thing); }
+    var boundHello = function(thing) { 
+        return person.hello.call(person, thing); 
+        //第二个person保证了对person对象name的调用
+    }
     boundHello("world");  
 
-link:http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/
+    //Brendan Eich says hello world
+
+{% endhighlight %}
+-----------------------------
+
+######[参考文档](http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
