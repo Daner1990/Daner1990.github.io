@@ -31,9 +31,19 @@ $georgia: Georgia, serif;
 $daughter:'Architects Daughter', cursive;
 $handlee: 'Handlee', cursive;
 
+//Max width
+
+$maxWidth: 740px;
+
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mincontent {
+  @media screen and (max-width: $maxWidth ) {
     @content;
   }
 }

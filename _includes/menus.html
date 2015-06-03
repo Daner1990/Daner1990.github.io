@@ -1,0 +1,7 @@
+<ul id="menus-tags">
+    {% for post in site.posts %}
+            {% for tag in post.tags%}
+            <li>{{tag}}</li>
+            {% endfor %}
+    {% endfor %}
+</ul>

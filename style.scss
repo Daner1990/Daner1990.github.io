@@ -27,7 +27,7 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 740px;
+    max-width: $maxWidth;
     padding: 0 10px;
     width: 100%;
 }
@@ -308,19 +308,57 @@ nav {
             color:#FFF;
         }
     }
-
 }
 
 .wrapper-footer {
     margin-top: 50px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    background-color: $lightGray;
+    //background-color: $lightGray;
 }
 
 footer {
     padding: 2px 0;
     text-align: center;
+}
+
+//
+//menus
+//
+#menus{
+    position:absolute;
+    z-index:10;
+    width:200px;
+    border-top:1px solid $lightGray;
+    right:0px;
+    top:111px;
+
+    @include mincontent{
+        display:none; 
+    }
+}
+
+#menus-tags{
+    list-style:none;
+
+    li{
+        border-radius: 3px;
+        color: #767676;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        padding: 8px 10px;
+        position: relative;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    li:hover{
+        background:#eeeeee;
+    }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
