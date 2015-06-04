@@ -49,6 +49,7 @@ define(function(){
         {% for post in site.posts %}
             {% for tag in post.tags%}
                 if(("{{tag}}").toLowerCase() == tag){
+
                     code += '<article class="post">';
 
                         code += '<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>';
