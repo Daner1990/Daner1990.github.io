@@ -1,0 +1,25 @@
+---
+layout: default
+title: filter 
+permalink: /filter/
+---
+
+<div class="posts">
+    {% for post in site.posts %}
+    <article class="post">
+
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+        <div class="entry">
+            {{ post.my_excerpt }}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        <ul class="page-tags">
+            {% for tag in post.tags%}
+            <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
+    </article>
+    {% endfor %}
+</div>

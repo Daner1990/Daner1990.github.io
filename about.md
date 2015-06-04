@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+
+感谢你访问我的blog
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+在建ing 如果你有很好的建议请联系我哟
+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[lilinjin1990@gmail.com](mailto:lilinjin1990@gmail.com)
