@@ -39,7 +39,10 @@ define(function(){
 
     var filter = function(e){
         console.log(e);
-        var tag = e.target.innerText;
+        var tag = e.target.innerHTML;
+        //firefox not support innerText;
+        //var tag = e.target.innerText;
+        
         var code = '';
         
         code += '<div class="posts">';
