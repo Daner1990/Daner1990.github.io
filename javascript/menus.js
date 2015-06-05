@@ -33,6 +33,7 @@ define(function(){
         for(var key in menus){
             codes += "<li>"+key+"</li>";
         }
+        codes += "<li>others</li>";
 
         menusWrapper.innerHTML = codes;
     };
