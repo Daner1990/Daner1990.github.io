@@ -327,7 +327,7 @@ footer {
 //menus
 //
 #menus{
-    position:absolute;
+    position:fixed;
     z-index:10;
     width:200px;
     border-top:1px solid $lightGray;
@@ -336,6 +336,17 @@ footer {
 
     @include mincontent{
         display:none; 
+    }
+
+    .menuname{
+        height:40px;
+        line-height:40px;
+        overflow:hidden;
+        margin-left:30px;
+        border-bottom:1px solid #666666;
+        color:#666666;
+        font-weight:bold;
+        letter-spacing:0.5px;
     }
 }
 
@@ -358,7 +369,23 @@ footer {
     }
 
     li:hover{
+        //background:#eeeeee;
+        color:#648eb7;
+    }
+
+    li:active{
         background:#eeeeee;
+    }
+
+    li:before, li::before{
+        content:'';
+        background:#648eb7;
+        position:absolute;
+        width:6px;
+        height:6px;
+        border-radius:50%;
+        left:0px;
+        top:15px;
     }
 }
 
