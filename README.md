@@ -7,3 +7,6 @@
 
 ## 2015-06-03
 > 根据具体文章的labs制定menu 
+
+## 本地服务
+>sass --style compressed style.scss style.css;jekyll --server 5000
