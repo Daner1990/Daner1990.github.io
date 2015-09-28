@@ -2,6 +2,7 @@
 layout: post
 title: 解决Git客户端提交Commit无贡献记录问题
 my_excerpt: 解决Git客户端提交Commit无贡献记录问题
+tags: [Windows,Git]
 ---
 
 最近通过Git客户端或者Git命令行提交代码，网页并没有记录贡献，有种我明明提交了代码你为什么不承认的感觉，这是无法容忍的
