@@ -157,9 +157,18 @@ img {
     position:fixed;
     top:0px;
     z-index:11;
-    background-image:url('images/bg-light.jpg');
-    background-repeat:repeat;
+    //background-image:url('images/bg-light.jpg');
+    //background-repeat:repeat;
+    background:rgba(0,0,0,1);
     width:100%;
+    color:#9d9d9d;
+
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    -o-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    border-radius: 0;
 }
 
 .wrapper-down{
