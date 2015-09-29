@@ -2,16 +2,25 @@
 layout: default
 ---
 
-<article class="post">
-  <h2>{{ page.title }}</h2>
+<article class="detail-post">
+  <h1 class="title">{{ page.title }}</h1>
+  <div class="date">
+    	{{ page.date | date: "%Y-%m-%d" }} 
+	{% if page.tages.size != 0 %}
+	<span class="space"> | </span><span class="tags">标签:</span>
+        <span class="tags-list">
+                {% for tag in page.tags%}
+                        <a href="" title="{{tag}}">{{tag}}</a>
+                {% endfor %}
+        </span>
+	{% endif %}
+
+  </div>
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
 
   {% include disqus.html %}
 </article>

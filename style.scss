@@ -354,6 +354,45 @@ nav {
     }
 }
 
+.detail-post{
+    .title{
+	font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+        font-size:26px;
+        color:#000;
+	padding:.5em 0;
+	border-bottom: 1px solid #cccccc;
+    }
+    .date{
+	font-style:normal;
+	font-size:12px;
+	color:#888888;
+    }
+    .categories{
+	color:#888;
+	font-size:12px;
+    }
+    .categories-list{
+	color:#bb0000;
+	font-size:12px;
+    }
+    .tags{
+	color:#888;
+	font-size:12px;
+    }
+    .tags-list{
+	color:#bb0000;
+	font-size:12px;
+	a{
+	    color:#bb0000;
+	   
+	}
+    }
+    .space{
+	color:#888888;
+	font-size:12px;
+    }
+}
+
 .wrapper-footer {
     margin-top: 50px;
     border-top: 1px solid #ddd;
