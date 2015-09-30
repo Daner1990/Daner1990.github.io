@@ -1,0 +1,20 @@
+---
+title: tags
+layout: default
+---
+
+<div id="menus" class="container">
+    <div class="menuname" style="display:none;">{{ site.menuname}}</div>
+    {% include menus.html %}
+</div>
+
+<div class="posts">
+	{% for tag in site.tags %}
+	  <span class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</span>
+		{% for post in tag[1] %}
+			{% include article.html %}
+		{% endfor %}
+	{% endfor %}
+</div>
+
+
