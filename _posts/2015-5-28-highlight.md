@@ -3,7 +3,7 @@ layout: post
 title: yekyll语法高亮
 my_excerpt: Jekyll 自带语法高亮功能，它是由 Pygments 来实现的。在文章中插入一段高亮代码非常 容易，只需使用 Liquid 标记
 categories: 工具
-tags:[工具,Jekyll]
+tags: [工具,Jekyll]
 ---
 
 ###以下是例子
