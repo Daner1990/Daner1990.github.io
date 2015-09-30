@@ -1,0 +1,23 @@
+---
+title: categories
+layout: default
+permalink: /categories/
+---
+<h1 class="page_tags_title">分类</h1>
+<div id="page_tags_list" class="container">
+	{% for category in site.categories%}
+	  <span class="page_tag">{{ category[0] }}</span>
+	{% endfor %}
+
+</div>
+
+<div class="posts" id="page_tags_posts">
+	{% for category in site.categories %}
+	  <span class="page_tag" id="{{ category[0] }}">{{ category[0] }}</span>
+		{% for post in category[1] %}
+			{% include article.html %}
+		{% endfor %}
+	{% endfor %}
+</div>
+
+
