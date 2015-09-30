@@ -46,7 +46,7 @@ define(function(){
         
         var code = '';
         
-        code += '<div class="posts">';
+        //code += '<div class="posts">';
 
         if(tag == "others"){
             {% for post in site.posts %}
@@ -75,9 +75,9 @@ define(function(){
                 {% endfor %}
             {% endfor %}
         }
-        code += '</div>';
+        //code += '</div>';
 
-        document.getElementById('main').innerHTML = code;
+        document.getElementById('page_tags_posts').innerHTML = code;
         return false; 
     };
 

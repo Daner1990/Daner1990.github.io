@@ -1,16 +1,17 @@
 ---
 title: tags
 layout: default
+permalink: /tags/
 ---
 
-<div id="menus" class="container">
+<div id="page_tags_list" class="container">
     <div class="menuname" style="display:none;">{{ site.menuname}}</div>
     {% include menus.html %}
 </div>
 
-<div class="posts">
+<div class="posts" id="page_tags_posts">
 	{% for tag in site.tags %}
-	  <span class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</span>
+	  <span class="page_tag" id="{{ tag[0] }}">{{ tag[0] }}</span>
 		{% for post in tag[1] %}
 			{% include article.html %}
 		{% endfor %}

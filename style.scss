@@ -448,6 +448,7 @@ footer {
         text-decoration: none;
         text-overflow: ellipsis;
         white-space: nowrap;
+		float:left;
     }
 
     li:hover{
@@ -468,6 +469,7 @@ footer {
         border-radius:50%;
         left:0px;
         top:15px;
+		display:none;
     }
 }
 
