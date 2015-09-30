@@ -17,9 +17,9 @@ require(['events','menus'],function(events,menus){
     window.addEventListener('scroll',events.scrollEventFix,false); 
 
     //menu init
-    menus.initMenu();
-    document.getElementById('menus-tags').addEventListener('click',function(e){
-        if(e.target && e.target.nodeName.toLowerCase() == 'li'){
+    //menus.initMenu();
+    document.getElementById('page_tags_list').addEventListener('click',function(e){
+        if(e.target && e.target.nodeName.toLowerCase() == 'span'){
             menus.filter(e);
         }
     },false);

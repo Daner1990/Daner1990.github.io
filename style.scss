@@ -473,6 +473,30 @@ footer {
     }
 }
 
+//
+//tags page
+//
+.page_tags_title{
+	border-bottom:1px solid #cccccc;
+	color:#2C3E50;
+	margin-bottom:5px;
+}
+
+#page_tags_list{
+	display:block;
+	position:relative;
+	width:100%;
+	margin:3px 0px 20px 0px;
+	padding:0px;
+
+	span.page_tag{
+		padding:1px 4px 0px 0px;
+		display:inline-block;
+		color:#bb0000;
+		font-size:16px;
+	}
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_sass/highlights";
