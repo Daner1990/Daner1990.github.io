@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Chrome Developer 开发工具学习
-tags: Tools
+categories: 工具
+tags:[工具]
 my_excerpt: 就近期对前端的开发来看，chrome developer在我看来是一款比firebug更加优秀的前端调试工具。但是chromedeveloper还有许多新功能等待我的发现。
 ---
 
