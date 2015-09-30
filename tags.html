@@ -3,10 +3,16 @@ title: tags
 layout: default
 permalink: /tags/
 ---
-
+<h1 class="page_tags_title">标签</h1>
 <div id="page_tags_list" class="container">
+	<!--
     <div class="menuname" style="display:none;">{{ site.menuname}}</div>
     {% include menus.html %}
+	-->
+	{% for tag in site.tags %}
+	  <span class="page_tag">{{ tag[0] }}</span>
+	{% endfor %}
+
 </div>
 
 <div class="posts" id="page_tags_posts">

@@ -27,20 +27,20 @@ define(function(){
     console.log(menus);
 
     var initMenu = function(){
-        var menusWrapper = document.getElementById('menus-tags');
+        var menusWrapper = document.getElementById('page-tags_list');
         var codes ="";
 
         for(var key in menus){
-            codes += "<li>"+key+"</li>";
+            codes += "<span>"+key+"</span>";
         }
-        codes += "<li>others</li>";
+        codes += "<span>others</span>";
 
         menusWrapper.innerHTML = codes;
     };
 
     var filter = function(e){
-        console.log(e);
         var tag = e.target.innerHTML;
+		console.log(tag);
         //firefox not support innerText;
         //var tag = e.target.innerText;
         
@@ -63,7 +63,7 @@ define(function(){
         }else{
             {% for post in site.posts %}
                 {% for tag in post.tags%}
-                    if(("{{tag}}").toLowerCase() == tag){
+                    if(("{{tag}}") == tag){
 
                     	code += '<article class="post">';
                             code += '<span class="time">{{ post.date | date : "%Y-%m-%d" }}</span>';
@@ -76,6 +76,7 @@ define(function(){
             {% endfor %}
         }
         //code += '</div>';
+		console.log(code);
 
         document.getElementById('page_tags_posts').innerHTML = code;
         return false; 
