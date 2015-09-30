@@ -2,7 +2,7 @@
 layout: post
 title: 解决Git客户端提交Commit无贡献记录问题
 my_excerpt: 解决Git客户端提交Commit无贡献记录问题
-categories: 工具
+categories: [工具]
 tags: [工具,Git]
 ---
 

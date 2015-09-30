@@ -2,7 +2,7 @@
 layout: post
 title: javascript:跨域问题(下)
 my_excerpt: 同源策略
-categories: Javascript
+categories: [Javascript]
 tags: [Javascript,跨域,同源策略]
 ---
 

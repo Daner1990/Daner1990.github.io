@@ -2,7 +2,7 @@
 layout: post
 title: Javascript:模块化编程
 my_excerpt: javascript 模块化编程,简单的了解两种模块化模式CommonJS和AMD
-categories: Javascript
+categories: [Javascript]
 tags: [Javascript,模块化编程]
 ---
 
