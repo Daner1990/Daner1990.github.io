@@ -36,10 +36,9 @@ require(['events','menus'],function(events,menus){
                 hash = e.target.innerHTML;
             }
             if(hash){
-		var url = window.location.host + window.location.path + "#" + hash;
+                var url = window.location.host + "#" + hash;
                 window.location.href = url;
-		console.log(hash);
-            }
+          }
             return false;
         });
     }
