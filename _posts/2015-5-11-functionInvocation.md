@@ -4,6 +4,7 @@ title: 调用指令:对apply/call/bind的理解
 my_excerpt: javascript中函数调用方法，具体内部是怎么实现调用的呢，对call,apply,bind的理解
 categories: [Javascript]
 tags: [Javascript,Web]
+pid: 201505110000
 ---
 
 ####Function Invocation

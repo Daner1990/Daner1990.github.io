@@ -4,6 +4,7 @@ title: blogtestpage
 my_excerpt: 前端技能日新月异，如何提升自己的技能树，紧跟前端发展潮流。在此基础上，有扎实的基础呢？简单的收藏了一些book和网站。记得去看哟～～
 categories: [Book]
 tags: [想看的书]
+pid: 201504290000
 ---
 
 <h2>推荐资料</h2>
