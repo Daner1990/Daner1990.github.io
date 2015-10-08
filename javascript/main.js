@@ -36,7 +36,9 @@ require(['events','menus'],function(events,menus){
                 hash = e.target.innerHTML;
             }
             if(hash){
-                window.location.href= window.location.host + window.location.path + "#" + hash;
+		var url = window.location.host + window.location.path + "#" + hash;
+                window.location.href = url;
+		console.log(hash);
             }
             return false;
         });
