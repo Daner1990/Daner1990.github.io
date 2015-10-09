@@ -36,7 +36,7 @@ require(['events','menus'],function(events,menus){
                 hash = e.target.innerHTML;
             }
             if(hash){
-                var url = window.location.host + "#" + hash;
+                var url = "#" + hash;
                 window.location.href = url;
           }
             return false;
