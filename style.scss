@@ -167,8 +167,8 @@ img {
     width:100%;
     color:#9d9d9d;
 
-    height:50px;
-    line-height:50px;
+    //height:50px;
+    //line-height:50px;
 
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -239,6 +239,9 @@ img {
     color:#9d9d9d;
     font-size: 16px;
     //font-family:$handlee;
+
+    height:50px;
+    line-height:50px;
 
     @include mobile {
         margin: 3px 0;
