@@ -29,4 +29,4 @@ pid: 201510091621
 经过检测发现其实是`ssh` 和 `https` 的原因导致的，`key` 已经正确加入了！
 <code>git</code>默认走的是<code>https协议</code>。所以在<code>clone</code>代码的时候注意使用<code>ssh协议</code>的连接。
 
-<img src="{{ site.baseurl }}/postPic/gitSshHttps/git_ssh_https.png" alt="" style="width:200px;margin: 5px auto;"/>
+<img src="{{ site.baseurl }}/postPics/gitSshHttps/git_ssh_https.png" alt="" style="width:200px;margin: 5px auto;"/>
