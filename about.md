@@ -14,4 +14,4 @@ permalink: /about/
 
 ### Contact me
 
-[lilinjin1990@gmail.com](mailto:lilinjin1990@gmail.com)
+[我是邮箱！请戳我！](mailto:lilinjin1990@gmail.com)
