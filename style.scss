@@ -245,6 +245,8 @@ img {
 
     @include mobile {
         margin: 3px 0;
+        height:30px;
+        line-height:30px;
     }
 }
 
@@ -260,7 +262,7 @@ nav {
         float: none;
         margin-top: 9px;
         display: block;
-        font-size: 16px;
+        font-size: 11px;
     }
 
     a {
