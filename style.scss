@@ -542,7 +542,7 @@ footer {
     bottom: 113px;
     left: 50%;
     z-index: 19;
-    margin-left: 230px;
+    margin-left: 390px;
 
     .btn-action {
         display: block;
@@ -608,6 +608,10 @@ footer {
         left: auto;
         right: 1em;
         bottom: 1em;
+    }
+
+    @include mincontent {
+        margin-left: 190px;
     }
 }
 
