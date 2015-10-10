@@ -2,8 +2,8 @@
 layout: post
 title: 解决Git Push总要输入用户名密码
 my_excerpt: 直接看文章吧少年！
-categories: [Tools]
-tags: [Tools,Git,SSH,HTTPS]
+categories: [工具]
+tags: [工具,Git,SSH,HTTPS]
 pid: 201510091621
 ---
 
@@ -19,8 +19,7 @@ pid: 201510091621
 
 我在`windows git bash` 生成`key` 的时候直接通过 `ssh-keygen` 来生成，并没有严格按照步骤接上`git` 的email。完成所有步骤后经验证。
 
-    Hi username! You've successfully authenticated, but GitHub does not
-	provide shell access. 
+    Hi username! You've successfully authenticated, but GitHub does not provide shell access. 
 
 
 验证通过但是依然要输入用户名密码才能提交！
