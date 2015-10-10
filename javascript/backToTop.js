@@ -6,10 +6,10 @@ define(function(){
     var clientHeight = window.innerHeight;
     var documentHeight = document.body.clientHeight;
     var scrollTopHeight = document.body.scrollTop;
-    var backToTopBtn = document.getElementById('backtotop');
+    var backToTopBtn = document.getElementsByClassName('backtotop')[0];
 
     var backToTop = function(){
-        if(!backtotop){
+        if(!backToTopBtn){
             backToTopBtn.style.opacity =0;
             return false;
         }
