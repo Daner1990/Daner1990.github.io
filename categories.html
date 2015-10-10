@@ -6,7 +6,7 @@ permalink: /categories/
 <h1 class="page_categories_title">分类</h1>
 <div id="page_categories_list" class="container">
 	{% for category in site.categories%}
-	  <span class="page_category">{{ category[0] }}  ({{ category[1].size }})</span>
+	  <span class="page_category" category="{{category[0]}}">{{ category[0] }}({{ category[1].size }})</span>
 	{% endfor %}
 
 </div>

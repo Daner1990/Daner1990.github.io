@@ -33,7 +33,7 @@ require(['events','menus'],function(events,menus){
         categoriesList.addEventListener('click',function(e){
             var hash = "";
             if(e.target && e.target.nodeName.toLowerCase() == 'span'){
-                hash = e.target.innerHTML;
+                hash = e.target.getAttribute('category');
             }
             if(hash){
                 var url = "#" + hash;

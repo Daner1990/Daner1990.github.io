@@ -29,3 +29,5 @@ pid: 201510091621
 <code>git</code>默认走的是<code>https协议</code>。所以在<code>clone</code>代码的时候注意使用<code>ssh协议</code>的连接。
 
 <img src="{{ site.baseurl }}/postPics/gitSshHttps/git_ssh_https.png" alt="" style="width:200px;margin: 5px auto;"/>
+
+[Git 不同协议配置方式](https://help.github.com/articles/which-remote-url-should-i-use/)
