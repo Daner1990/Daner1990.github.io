@@ -6,11 +6,13 @@
 require.config({
     path:{
         'menus':'menus',
-        'events':'events'
+        'events':'events',
+        'backToTop':'backToTop'
     }
 });
 
-require(['events','menus'],function(events,menus){
+require(['events','menus','backToTop'],function(events,menus,backToTop){
+
     //page init
     events.resizeEvent();
     window.addEventListener('resize',events.resizeEvent,false); 
@@ -40,6 +42,16 @@ require(['events','menus'],function(events,menus){
                 window.location.href = url;
           }
             return false;
+        });
+    }
+
+    //back to top
+    var backToTopBtn = document.getElementsByClassName('backtotop');
+    if(backToTopBtn){
+        backToTop.backToTop();
+        backToTopBtn = backToTopBtn[0];
+        backToTopBtn.addEventListener('click',function(e){
+            backToTop.backToTopEvent();
         });
     }
 
