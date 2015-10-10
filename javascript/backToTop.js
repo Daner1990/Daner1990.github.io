@@ -3,12 +3,13 @@
 // backtotop.js
 
 define(function(){
-    var clientHeight = window.innerHeight;
-    var documentHeight = document.body.clientHeight;
-    var scrollTopHeight = document.body.scrollTop;
-    var backToTopBtn = document.getElementsByClassName('backtotop')[0];
 
     var backToTop = function(){
+        var clientHeight = window.innerHeight;
+        var documentHeight = document.body.clientHeight;
+        var scrollTopHeight = document.body.scrollTop;
+        var backToTopBtn = document.getElementsByClassName('backtotop')[0];
+        
         if(!backToTopBtn){
             backToTopBtn.style.opacity =0;
             return false;
