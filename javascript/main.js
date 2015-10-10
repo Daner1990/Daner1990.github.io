@@ -48,11 +48,9 @@ require(['events','menus','backToTop'],function(events,menus,backToTop){
     //back to top
     var backToTopBtn = document.getElementsByClassName('backtotop');
     if(backToTopBtn){
-        backToTop.backToTop();
         backToTopBtn = backToTopBtn[0];
-        backToTopBtn.addEventListener('click',function(e){
-            backToTop.backToTopEvent();
-        });
+        window.addEventListener('scroll',backToTop.backToTop,false);
+        backToTopBtn.addEventListener('click',backToTop.backToTopEvent,false);
     }
 
 });

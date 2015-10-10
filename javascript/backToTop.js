@@ -10,6 +10,7 @@ define(function(){
 
     var backToTop = function(){
         if(!backtotop){
+            backToTopBtn.style.opacity =0;
             return false;
         }
 
