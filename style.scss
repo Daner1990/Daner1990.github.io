@@ -611,7 +611,10 @@ footer {
     }
 
     @include mincontent {
-        margin-left: 190px;
+        margin:auto;
+        left: auto;
+        right: 1em;
+        bottom: 3em;
     }
 }
 
