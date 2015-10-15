@@ -9,13 +9,13 @@ pid: 201510151608
 
 这几天在把之前Blog的文章Copy过来，在导入一片全代码的文章时出现了以下错误
 
-{% highlight %}
-    Regenerating: 1 file(s) changed at 2015-10-15 15:31:48   
-    Liquid Exception: highlight tag was never closed in _posts/2015-4-16-css-load.md/#excerpt
-	...error:
+{%highlight  html  linenos%}
+Regenerating: 1 file(s) changed at 2015-10-15 15:31:48   
+Liquid Exception: highlight tag was never closed in _posts/2015-4-16-css-load.md/#excerpt
+...error:
     Error: highlight tag was never closed
     Error: Run jekyll build --trace for more information.
-{% endhighlight %}
+{%endhighlight%}
 
 jekyll版本是 2.5.3。具体文章是[css load标签](http://daner1990.github.io/css-load/);
 
