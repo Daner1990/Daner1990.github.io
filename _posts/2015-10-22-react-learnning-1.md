@@ -96,7 +96,7 @@ a. 代码最开始加载三个库，`react`是React的核心库，`react-dom`提
 
 b. `ReactDOM.render()`方法是react最基本的方法，将模板转为HTML语言，并插入指定DOM节点。
 
-c. `JSX语法(Javascript XML)`，让HTML，javascript可以混写，遇到HTML标签`<开头`就用HTML解析，遇到`{`开头就用Javascript规则解析，遇到`{{`开头就解析为CSS。JSX有严格的标准。
+c. `JSX语法(Javascript XML)`，让HTML，javascript可以混写，遇到HTML标签`<开头`就用HTML解析，遇到`{`开头就用Javascript规则解析，遇到`{``{`开头就解析为CSS。JSX有严格的标准。
 
 d. `React.createClass()`用于生成组件类，以上例子中变量`Hello`就是我们生成的组件类，模板插入`<Hello />`，就会自动生成一个Hello的实例。组件类通过render来输出组件。
 
