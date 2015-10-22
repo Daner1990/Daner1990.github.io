@@ -17,18 +17,17 @@ pid: 201510221412
 
 3. 在相关项目下安装`react`和`react dom`
 
-	`npm install --save react react-dom`
+{% highlight html %}
+`npm install --save react react-dom`
+{% endhighlight %}
 
 4. 安装[`Browserify`](http://browserify.org/#install)。
 `Browserify`作为一个[Javascript打包工具](http://www.ruanyifeng.com/blog/2014/09/package-management.html)。
 可以把类似`node`风格的`require()`方法以及其依赖打包为浏览器可读的代码以便在浏览器中运行。 
 类似工具还有`webpack`等根据个人喜好进行安装。
 
-   `npm install -g browserify`
-
----
-
 {% highlight html %}
+`npm install -g browserify`
 {% endhighlight %}
 
 ---
