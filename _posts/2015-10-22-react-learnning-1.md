@@ -28,9 +28,62 @@ pid: 201510221412
 
 {% highlight html %}
 `npm install -g browserify`
+browserify -t babelify main.js -o bundle.js
 {% endhighlight %}
 
 ---
+
+**<span style="color:#dd0000">2. 整体理解 `React`</span>**
+
+我们从一段很基础的HTML中对react进行一个整体的理解：
+
+{% highlight html linenos %}
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../build/react.js"></script>
+  <script src="../build/react-dom.js"></script>
+  <script src="../build/browser.min.js"></script>
+</head>
+<body>
+  <script type="text/babel">
+    var Hello = React.createClass({
+      getInitialState: function () {
+        return {
+          opacity: 1.0
+        };
+      },
+
+      componentDidMount: function () {
+        this.timer = setInterval(function () {
+          var opacity = this.state.opacity;
+          opacity -= .05;
+          if (opacity < 0.1) {
+            opacity = 1.0;
+          }
+          this.setState({
+            opacity: opacity
+          });
+        }.bind(this), 100);
+      },
+
+      render: function () {
+        return (
+          <div style={{opacity: this.state.opacity}}>
+            Hello {this.props.name}
+          </div>
+          );
+      }
+    });
+
+    ReactDOM.render(
+      <Hello name="world"/>,
+      document.body
+      );
+  </script>
+</body>
+</html>
+{% endhighlight %}
 
 [React 入门](http://www.ruanyifeng.com/blog/2015/03/react.html);
 
