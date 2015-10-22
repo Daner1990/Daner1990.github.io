@@ -28,7 +28,7 @@ pid: 201510221412
 
 ---
 
-{% highlight %}
+{% highlight html %}
 {% endhighlight %}
 
 ---
