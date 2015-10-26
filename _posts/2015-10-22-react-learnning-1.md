@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React学习笔记一
+title: React学习笔记(一)
 my_excerpt: 直接看文章吧少年！
 categories: [Javascript]
 tags: [Javascript,React]
