@@ -11,28 +11,27 @@ pid: 201510261512
 #简介
 
 我们知道，在React中一个组件就是一个**状态机**。对于特定的输入，总会返回一致的输出。
-
 整个生命周期分三个阶段，并且在每个阶段都有简单的API可调用:
-
-
 
 - <span style="color:#dd2c4c">实例化</span> 
 - <span style="color:#dd2c4c">活动期</span>
 - <span style="color:#dd2c4c">销毁</span>
 
-
-
 ##实例化
 
 当一个实例初次被创建被调用的方法有：
 
-- getDefaultProps:
+-  <span style="color:#dd2c4c">getDefaultProps:</span>
 
 	用于为实例设置默认的props值
 
 	对于组件类来说，这个方法只会被调用**一次**。
 
-- getInitialState
-- componentWillMount
-- render
-- componentDidMount
+- <span style="color:#dd2c4c"> getInitialState</span>
+- <span style="color:#dd2c4c"> componentWillMoun</span>t
+- <span style="color:#dd2c4c"> rende</span>r
+- <span style="color:#dd2c4c"> componentDidMoun</span>t
+
+
+>dddd
+>ddd
