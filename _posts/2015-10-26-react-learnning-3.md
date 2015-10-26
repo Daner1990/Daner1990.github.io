@@ -29,8 +29,11 @@ pid: 201510261512
 当一个实例初次被创建被调用的方法有：
 
 - getDefaultProps:
+
 	用于为实例设置默认的props值
+
 	对于组件类来说，这个方法只会被调用**一次**。
+
 - getInitialState
 - componentWillMount
 - render
