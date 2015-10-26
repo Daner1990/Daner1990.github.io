@@ -14,11 +14,11 @@ pid: 201510261512
 
 整个生命周期分三个阶段，并且在每个阶段都有简单的API可调用:
 
-<span style="color:#dd2c4c"></span>
 
-> 实例化 
-> 活动期
-> 销毁
+
+- <span style="color:#dd2c4c">实例化</span> 
+- <span style="color:#dd2c4c">活动期</span>
+- <span style="color:#dd2c4c">销毁</span>
 
 
 
@@ -29,6 +29,7 @@ pid: 201510261512
 - getDefaultProps:
 
 	用于为实例设置默认的props值
+
 	对于组件类来说，这个方法只会被调用**一次**。
 
 - getInitialState
