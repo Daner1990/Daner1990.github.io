@@ -47,4 +47,18 @@ pid: 201510261512
 - <span style="color:#dd2c4c">componentDidMount</span>
 	
 	在render方法成功调用并真实的DOM已经被渲染之后。可以在该方法内通过this.getDOMNode()来访问渲染之后的真实DOM！
-	
+
+
+##存在期
+
+在存在期，组件已经渲染好了，用户可以和他进行交互操作了。通过click等事件来触发一个事件处理器。通过用户改变组件或者整个应用的state，便会有新的state流入组件树。并求我们会获得操控他的机会：
+
+- componentWillReceiveProps
+- shouldComponentUpdate
+- componentWillUpdate
+- componentDidUpdate
+
+
+##销毁&清理期
+
+- componentWillUnmount
