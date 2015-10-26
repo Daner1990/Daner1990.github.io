@@ -17,7 +17,9 @@ pid: 201510261512
 <div style="color:#dd2c4c">
 
 - 实例化 
+
 - 活动期
+
 - 销毁
 
 </div>
