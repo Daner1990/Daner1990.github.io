@@ -53,12 +53,28 @@ pid: 201510261512
 
 在存在期，组件已经渲染好了，用户可以和他进行交互操作了。通过click等事件来触发一个事件处理器。通过用户改变组件或者整个应用的state，便会有新的state流入组件树。并求我们会获得操控他的机会：
 
-- componentWillReceiveProps
-- shouldComponentUpdate
-- componentWillUpdate
-- componentDidUpdate
+- <span style="color:#dd2c4c">componentWillReceiveProps</span>
+
+	在任意时刻，组件的props都可以通过父辈组件来更改。出现这种情况的时候。该方法就会被调用。
+	我们就获得的修改props对象和更新state的机会。
+
+- <span style="color:#dd2c4c">shouldComponentUpdate</span>
+
+	在组件渲染时进行精确的优化(一般不用)
+
+- <span style="color:#dd2c4c">componentWillUpdate</span>
+
+	在接受到新的state和props进行渲染之前，调用。
+	`我们并不可以在该方法中更新stat和props，而是借助componentWillReceiveProps在运行时更新state(this.setState)`
+
+- <span style="color:#dd2c4c">componentDidUpdate</span>
+
+	让我们有了更新已经渲染好的DOM的机会.
+
 
 
 ##销毁&清理期
 
-- componentWillUnmount
+- <span style="color:#dd2c4c">componentWillUnmount</span>
+
+	在组件被移除之前被调用，做一些清理工作。比如关闭定时器等。
