@@ -199,6 +199,7 @@ img {
     width: 40px;
     height: 40px;
     margin-right: 15px;
+    margin-top: 5px;
 
     @include mobile {
         float: none;
@@ -237,7 +238,7 @@ img {
 }
 
 .site-description {
-    margin: -5px 0 0 0;
+    margin: 0 0 0 0;
     //color: $gray;
     color:#9d9d9d;
     font-size: 16px;
