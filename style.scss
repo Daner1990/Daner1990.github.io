@@ -630,6 +630,28 @@ footer {
     }
 }
 
+//
+// pervious next page
+//
+
+.pagePervious.pageNext{ 
+    
+    text-align:right;
+
+    .pageNav{
+        font-weight:bold;
+        font-size:16px;
+        color:#dd0000;
+    }
+
+    .pageNavInvalid{
+        font-weight:bold;
+        font-size:16px;
+        color:#D0D0D0;
+    }
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_sass/highlights";
