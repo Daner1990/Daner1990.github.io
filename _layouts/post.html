@@ -10,7 +10,7 @@ layout: default
     <span class="space"> | </span><span class="tags">分类:</span>
           <span class="tags-list">
                   {% for category in page.categories %}
-                          <a href="" title="{{category}}">{{category}}</a>
+                          <a href="{{site.baseurl}}/categories/#{{category}}" title="{{category}}">{{category}}</a>
                   {% endfor %}
           </span>
     {% endif %}
@@ -18,7 +18,7 @@ layout: default
   	<span class="space"> | </span><span class="tags">标签:</span>
           <span class="tags-list">
                   {% for tag in page.tags%}
-                          <a href="" title="{{tag}}">{{tag}}</a>
+                          <a href="{{site.baseurl}}/tags/#{{tag}}" title="{{tag}}">{{tag}}</a>
                   {% endfor %}
           </span>
   	{% endif %}
