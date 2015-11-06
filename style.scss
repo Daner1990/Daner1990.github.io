@@ -283,10 +283,11 @@ nav {
             color: #9d9d9d;
         }
     }
-    a,a:hover,a:active,a:focus {
+    a:hover,a:active,a:focus {
         outline: 0;
         color:#9d9d9d;
         background:rgba(255,255,255,0.3);
+        border-radius:5px;
     }
 }
 
