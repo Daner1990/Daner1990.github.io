@@ -6,17 +6,21 @@
 require.config({
     path:{
         'menus':'menus',
+        'footer':'footer',
         'events':'events',
         'backToTop':'backToTop'
     }
 });
 
-require(['events','menus','backToTop'],function(events,menus,backToTop){
+require(['events','footer','menus','backToTop'],function(events,footer,menus,backToTop){
 
     //page init
     events.resizeEvent();
     window.addEventListener('resize',events.resizeEvent,false); 
     window.addEventListener('scroll',events.scrollEventFix,false); 
+
+    //page footer init
+    footer.initFooter();
 
     //menu init
     //menus.initMenu();
