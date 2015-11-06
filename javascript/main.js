@@ -19,9 +19,6 @@ require(['events','footer','menus','backToTop'],function(events,footer,menus,bac
     window.addEventListener('resize',events.resizeEvent,false); 
     window.addEventListener('scroll',events.scrollEventFix,false); 
 
-    //page footer init
-    footer.initFooter();
-
     //menu init
     //menus.initMenu();
     var tagsList = document.getElementById('page_tags_list');
@@ -56,5 +53,8 @@ require(['events','footer','menus','backToTop'],function(events,footer,menus,bac
         window.addEventListener('scroll',backToTop.backToTop,false);
         backToTopBtn.addEventListener('click',backToTop.backToTopEvent,false);
     }
+
+    //page footer init
+    footer.initFooter();
 
 });
