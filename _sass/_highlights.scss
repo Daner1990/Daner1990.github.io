@@ -2,15 +2,27 @@
     background-color: #efefef;
     padding: 7px 7px 7px 10px;
     border: 1px solid #ddd;
-    -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-    box-shadow: 3px 3px rgba(0,0,0,0.1);
+    //-moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    //-webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    //box-shadow: 3px 3px rgba(0,0,0,0.1);
     margin: 20px 0 20px 0;
     //overflow: scroll;
     overflow:auto;
     text-indent:0px;
 }
 
+.highlight:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c2c0bc;
+    background-color: #f1ede4;
+    content: "Code"
+}
 
 code {
     font-family: "Consolas","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
