@@ -5,15 +5,23 @@ layout: default
 <article class="detail-post">
   <h1 class="title">{{ page.title }}</h1>
   <div class="date">
-    	{{ page.date | date: "%Y-%m-%d" }} 
-	{% if page.tages.size != 0 %}
-	<span class="space"> | </span><span class="tags">标签:</span>
-        <span class="tags-list">
-                {% for tag in page.tags%}
-                        <a href="" title="{{tag}}">{{tag}}</a>
-                {% endfor %}
-        </span>
-	{% endif %}
+  	{{ page.date | date: "%Y-%m-%d" }} 
+    {% if page.categories.size != 0 %}
+    <span class="space"> | </span><span class="tags">分类:</span>
+          <span class="tags-list">
+                  {% for category in page.categories %}
+                          <a href="" title="{{category}}">{{category}}</a>
+                  {% endfor %}
+          </span>
+    {% endif %}
+  	{% if page.tags.size != 0 %}
+  	<span class="space"> | </span><span class="tags">标签:</span>
+          <span class="tags-list">
+                  {% for tag in page.tags%}
+                          <a href="" title="{{tag}}">{{tag}}</a>
+                  {% endfor %}
+          </span>
+  	{% endif %}
 
   </div>
 
