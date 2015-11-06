@@ -110,9 +110,13 @@ y. 组件是有生命周期的。分为三个状态`Mounting 已插入真实 DOM
 `React` 为每个状态都提供了两种处理函数，`will` 函数在进入状态之前调用，`did` 函数在进入状态之后调用，三种状态共计五种处理函数。
 
 >componentWillMount()
+
 >componentDidMount()
+
 >componentWillUpdate(object nextProps, object nextState)
+
 >componentDidUpdate(object prevProps, object prevState)
+
 >componentWillUnmount()
 
 [React 入门](http://www.ruanyifeng.com/blog/2015/03/react.html);
