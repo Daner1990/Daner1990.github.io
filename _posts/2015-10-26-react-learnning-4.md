@@ -22,3 +22,24 @@ pid: 201511061512
 >@default return : true
 
 >@description : 默认该方法永远会返回true，因为组件总会调用render方法。但是在首次渲染时，shouldComponentUpdate并不会被调用。
+
+#什么拖慢了你的应用
+
+这里介绍一个插件`React.addons.Perf`.
+
+在chrome命令行中可以做以下炒作来判断那些部分拖慢了你的应用：
+
+>React.addons.Perf.start()
+
+>//启动采集快照
+
+>操作应用中你觉得拖慢了的事件等操作
+
+>React.addons.Perf.stop()
+
+>//停止采集
+
+>React.addons.Perf.printWaster()
+
+>输出结果查看消耗耗时列表
+
