@@ -51,6 +51,18 @@ easy_install ThirdSoftware
 在命令行中运行：`easy_install -U RBTools`
 运行`post-review --version`测试安装是否成功
 
+>gnuDiff
+
+reviewboard的一个重要功能就是diff比对。该软件必不可缺
+
 
 ---
 
+几个注意事项：
+
+**所有的软件都需要将安装路径下的执行程序所在目录（bin，python的script）添加到Path系统变量中以上命令才能正确运行**
+
+**svn不要用tortoiseSVN，rbtools在生成.reviewboardrc文件的时候会报错。请安装command line svn**
+{% highlight html %}
+The current directory does not contain a checkout from a supported source code repository. 
+{% endhighlight %}
