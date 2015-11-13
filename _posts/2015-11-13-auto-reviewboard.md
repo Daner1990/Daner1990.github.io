@@ -34,7 +34,7 @@ pid: 201511131512
 
 >easy_install
 
-确保系统中有easy_install工具。如果没有，请从这里下载并安装：http://peak.telecommunity.com/dist/ez_setup.py。easy_install主要是用来安装python的第三方扩展包。
+确保系统中有 `easy_install`工具。如果没有，请从这里下载并安装：`http://peak.telecommunity.com/dist/ez_setup.py`。`easy_install`主要是用来安装python的第三方扩展包。
 正常情况下，我们要给Python安装第三方的扩展包，我们必须下载压缩包，解压缩到一个目录，然后命令行或者终端打开这个目录，然后执行
 {% highlight html %}
 python setup.py install
@@ -62,7 +62,31 @@ reviewboard的一个重要功能就是diff比对。该软件必不可缺
 
 **所有的软件都需要将安装路径下的执行程序所在目录（bin，python的script）添加到Path系统变量中以上命令才能正确运行**
 
-**svn不要用tortoiseSVN，rbtools在生成.reviewboardrc文件的时候会报错。请安装command line svn**
+**svn不要用tortoiseSVN，rbtools在生成.reviewboardrc文件的时候会报错。请安装command line svn：Subversion**
 {% highlight html %}
 The current directory does not contain a checkout from a supported source code repository. 
+{% endhighlight %}
+
+---
+
+现在也可以直接在reviewboard官网下载`RBTool`。不需要单独安装python和easy_install，rbtool中自带了python。
+
+##配置
+
+>指定reviewboard服务器
+
+1. 通过`.reviewboardrc`文件：在版本控制的根目录下运行
+
+{% highlight html %}
+rbt setup-repo
+{% endhighlight %}
+
+他会要求你输入reviewboard server url。以及username和password。
+并会根据你的svn checkout地址识别出subversion repository。有可能不是你希望的，但可以后期在文件中直接修改，在这里直接yes。保证`.reviewboard`文件顺利生成。
+
+2. 通过设置svn目录属性
+
+将Review Board服务器的地址设置到`reviewboard:url`属性中
+{% highlight html %}
+svn propset reviewboard:url http://reviewboard.xxx.domain/
 {% endhighlight %}
