@@ -73,7 +73,7 @@ The current directory does not contain a checkout from a supported source code r
 
 ##配置
 
->指定reviewboard服务器
+>[指定reviewboard服务器](https://www.reviewboard.org/docs/rbtools/dev/rbt/configuration/repositories/#rbtools-repo-config)
 
 1. 通过`.reviewboardrc`文件：在版本控制的根目录下运行
 
