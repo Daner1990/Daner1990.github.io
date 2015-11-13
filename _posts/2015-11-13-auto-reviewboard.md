@@ -1,4 +1,4 @@
---
+---
 layout: post
 title: 脚本化boardreview
 my_excerpt: 直接看文章吧少年！
@@ -46,6 +46,11 @@ python setup.py install
 easy_install ThirdSoftware
 {% endhighlight %}
 
+>RBTools
+
+在命令行中运行：`easy_install -U RBTools`
+运行`post-review --version`测试安装是否成功
 
 
+---
 
