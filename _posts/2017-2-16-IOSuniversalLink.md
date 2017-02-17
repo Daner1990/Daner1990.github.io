@@ -363,5 +363,153 @@ window.NRUM.config = {
 
 {% endhighlight %}
 
+虽然有一些外部的引用，和一些搞不懂是干什么用的方法和变量，但是基本逻辑还是能够看明白。好像也没有什么特别的地方。研究了许久，看到了一个叫做apple-app-site-association的jsonp请求很奇特。这是来干嘛用的？
 
-<img src="{{ site.baseurl }}/postPics/weinre/5.png" alt="" style="width:600px;margin: 5px auto;"/>
+
+{% highlight  javascript %}
+
+{
+   "applinks": {
+       "apps": [ ],
+       "details": {
+           "TEAM-IDENTIFIER.YOUR.BUNDLE.IDENTIFIER": {
+               "paths": [
+                   "*"
+               ]
+           }
+       }
+   }
+}
+
+{% endhighlight %}
+
+
+大家可以直接访问这个链接，查看里面的内容
+
+http://active.163.com/service/form/v1/5847/view/1047.jsonp
+
+为了搞清楚这个问题，费尽千辛万苦搜索了很多文章，最终锁定了一个极为关键的名词 `Universal links`。
+
+>Apple为iOS 9发布了一个所谓的通用链接的深层链接特性，即Universal links。虽然它并不完美，但是这一发布，让数以千计的应用开发人员突然意识到自己的应用体验被打破。
+>
+>Universal links，一种能够方便的通过传统的HTTP/HTTPS 链接来启动App，使用相同的网址打开网站和App。
+
+关于这个问题的提问与universal links的介绍 点击这里查看:
+
+http://stackoverflow.com/questions/31891777/ios-9-safari-iframe-src-with-custom-url-scheme-not-working
+
+
+ios9推行的一个新的协议！
+
+关于本文的这个问题，国内的论坛有许许多多的文章来解决，但是提到universal links的文章少之又少。他改变了用户体验的关键在于，微信没有办法屏蔽这个协议。因此如果我们的app注册了这个协议，那么我们就能够从微信中直接唤起app。
+
+至于universal links具体如何实现，让ios的同学去搞定吧，这里提供两个参考文章
+
+http://www.cocoachina.com/bbs/read.php?tid-1486368.html
+
+https://blog.branch.io/how-to-setup-universal-links-to-deep-link-on-apple-ios-9
+
+支持了这个协议之后，我们又可以通过iframe来唤起app了，因此基本逻辑就是这样了。最终的调研结果是
+
+没有完美的解决方案
+
+就算是网易新闻，这个按钮在使用过程中也会有一些小bug，无法做到完美的状态。
+
+因为我们面临许多没办法解决的问题，比如无法真正意义上的判断本地是否安装了app，pageshow，pagehide并不是所有的浏览器都支持等。很多其他博客里面，什么计算时间差等方案，我花了很久的时间去研究这些方案，结果是，根！本！没！有！用！
+
+老实说，从微信中跳转到外部浏览器，并不是一个好的解决方案，这样会导致很多用户流失，因此大家都在ios上实现了universal links，而我更加倾向的方案是知乎的解决，他们从设计上避免了在一个按钮上来判断这个逻辑，而采用了两个按钮的方式。
+
+网易新闻的逻辑是，点击打开会跳转到一个下载页面，这个下载页面一加载完成就尝试打开app，如果打开了就直接跑到app里面去了，如果没有就在页面上有一个立即下载的按钮，按钮行只有下载处理。
+
+在后续与ios同学实现universal liks的时候又遇到了一些坑，总结了一些经验，欢迎持续关注我下一篇关于这个话题的讨论。
+
+**以上内容转来自：https://gold.xitu.io/post/57b6ba9f128fe10054bb5401**
+
+##第二篇
+
+在ios9出来以后，我们发现越来越多的应用能够直接绕过微信的屏蔽，从其内置浏览器中直接唤起app。相比于通过弹窗提示让用户到浏览器中操作的方式，这无疑是极大的提高了用户体验与流量导入。因此，在ios上实现直接从微信中唤起app变得非常必要。
+
+而其中的关键，就在于通用链接·universal links·：一种能够方便通过传统HTTP链接来启动app的方式，可以通过相同的网址打开网站和app。
+
+对于ios开发者来说，可以很轻松在网上找到非常多给自己的app配置universal links的教程文章，这里推荐 http://www.cocoachina.com/ios/20150902/13321.html
+
+这篇文章的主要目的，就是从前端角度来聊一聊·universal links·的运用。
+
+无论是Android还是ios应用，都能够通过一定的方式捕获浏览器正在进行的url跳转。我们知道在页面中通常有如下三种方式能够访问别的链接
+
+通过html中的a标签
+{% highlight  javascript %}
+<a href="universal links">action</a>
+
+{% endhighlight %}
+
+通过js的location方法
+{% highlight  javascript %}
+window.location = 'universal links';
+{% endhighlight %}
+
+通过iframe标签，一般情况下我们会通过js创建一个iframe标签，并通过设置iframe的src属性实现跳转
+
+{% highlight  javascript %}
+var iframe = document.createElement('iframe');
+iframe.style.cssText = 'width: 0; height: 0';
+document.body.appendChild(iframe);
+iframe.src = 'universal links';
+{% endhighlight %}
+
+为了能够在js中控制跳转行为，我们基本不会通过a标签的方式，而选择2，3种。不过比较头疼的是，并不是所有手机版本的浏览器都能够毫无顾忌的使用这两种方式，比如在ios8中，据说他们ios开发通过通常使用的方式，无法捕获window.location的跳转，因此我们得采用iframe的方式来实现唤起。而在Android上浏览器的表现就更加杂乱不一，因此如果想要兼顾所有的浏览器，从测试角度来说，这是一个比较大的工作量。
+
+而universal links如果能够实现从微信中直接唤起app，那么微信以外的浏览器的复杂场景我们都不需要考虑了。因此这简直就是一件利国利民的好事，从开发到测试的工作量都大大降低。
+
+读过上一篇文章的同学应该知道，单单从浏览器层面，我们无法精准的判断本地是否安装了app。这给我们实现这一需求造成了非常多的困扰。而从ios9.2开始，**针对universal links，有一个非常重要的改动，通俗来说，就是必须通过访问不同的url链接，我们才能在微信中唤起本地app**。
+
+在上面我们介绍过，universal links能够使用和访问普通网页一样的http链接，唤起我们自己的app。比如我们访问一个页面`http://www.test.com/gold`能够在浏览器中打开一个页面，而当我们在手机浏览器中，通过上面的三种方式尝试访问同样的地址`http://www.test.com/gold`，只要本地安装了指定的app，就可以打开app中的对应页面。但是9.2的改动之后就不行了，在9.2之后，我们必须使用2个不同的域名，并且这2个域名指向同一个页面，我们才能够在微信中唤起app。
+
+如果我们仅仅只是配置了一个域名，那么当我们在微信中打开这个网页，并且在页面中访问自身时，页面仅仅相当于一次刷新，而app并不会被唤起。而点击在浏览器中打开时，会唤起app。
+
+对于不了解的人来说，这是一个深坑，而当我们了解了其中的细节，那么我们就能够利用这一点，完美的实现有则唤起，无则下载的需求。
+
+假如我们有一个app，demoAPP。我们的ios同事已经配置好了universal links，2个域名分别为`a.com`, `b.com`。另外我们有一个宣传页面，在浏览器中，`a.com/activity`与`b.com/activity`都能够访问该宣传页面。
+
+为了规范统一，我们规定将该宣传页面从demoAPP分享出来时，页面地址使用`a.com/activity`，而在当我们想要唤起demoAPP时，使用`b.com/activity`.
+
+另外，在实践中我发现如下特性，如果本地安装了demoAPP，那么`a.com/activity`中唤起app之后，不会发生任何变化。而如果本地没有安装demoAPP，页面会跳转到`b.com/activity`，当到了这个页面，我们已经知道无法唤起，因此直接下载即可。
+
+因此根据这个特性，我们有了如下的实践方案
+
+{% highlight  javascript %}
+
+var openURL = {
+    open: 'b.com/activity',
+    down: 'downloadurl'
+},
+// 打开app的按钮
+btn = document.querySelector('.open-app'),
+curURL = window.location.href;
+if (/b.com/ig.test(curURL)) {
+    window.location = openURL.down;
+    return;
+}
+
+btn.onclick(function() {
+    window.location = 'b.com/activity';
+})
+{% endhighlight %}
+
+是不是很简单！
+
+当然在具体实现上，还有许多繁琐的细枝末节需要我们一步一步去完善。这里只是提供了一个思路。从整体来说，这个需求并不是一个简单的任务，我们需要后端同学配置2套域名，需要ios同事配合，甚至还需要和产品不停的沟通，因为有一些确实无法实现的东西需要他们理解。
+
+##第三方
+
+老实说，如果自己劳心劳力想要比较完善的实现这么个需求，真的吃力不讨好，需要配合的部门太多，耗时太多，最后的效果还并不是很好，很多用户还对这种弹窗下载提示真的深恶痛绝。因此，通过第三方的解决方案无疑是最好的办法。
+
+这里推荐2个第三方方案，具体的优势，实现与配置方式在他们网站中都有详细的讲解，如果真的有接到这个需求的同学，强烈建议参考。当然，如果有数据隐私这方面的考虑的话，就还是自己老老实实的做兼容吧，反正方案就是这2篇文章说的这些。
+
+`磨窗` http://www.magicwindow.cn/
+
+`deepshare` http://deepshare.io/redirect-once/
+
+我知道有的同学会想吐槽，说了这么多，原来还是第三方才是最佳方案，干嘛不直接说得了！那么我只能说，这么想的同学，肯定不知道经验这个东西，在撕b上到底有多重要！！
+
+**第二篇文章转自：https://gold.xitu.io/entry/57bd1e6179bc440063b3a029/view**
