@@ -7,7 +7,7 @@ tags: [tools,svn]
 pid: 201706270000
 ---
 
-##背景
+## 背景
 
 我司在提交代码之前都需要对代码进行pre commit review。但在实际操作中并没有那么严苛。
 
@@ -19,7 +19,7 @@ pid: 201706270000
 
 为了使用其中一个插件的功能而内存中长时间打开一个1G左右的软件有些得不偿失。
 
-##解决方案
+## 解决方案
 
 最近了解到RBTool新版本支持ALIASES，支持自定义命令，只要在reviewboardrc文件中进行简单的配置就可以实现一条命令直接发布代码审计。
 
@@ -64,7 +64,7 @@ rbt pt "保持summary和description一致，无法空格"
 
 https://www.reviewboard.org/docs/rbtools/dev/rbt/commands/post/#rbt-post
 
-##弊端
+## 弊端
 
 在实际操作过程并不是那么美好，虽然节约了字符输入量，有两个问题
 
@@ -85,4 +85,8 @@ https://www.reviewboard.org/docs/rbtools/dev/rbt/commands/post/#rbt-post
 Review request #163145 posted.
 {% endhighlight %}
 
->第二：命令行输入summary&description不支持直接空格，只能一次输入一个字符
+>第二：命令行输入summary&description不支持直接空格，只能一次输入一个字符，python在识别command中参数时，是通过空格来判断是第几个参数的
+
+在考虑加密的形式来写入空格，换行符。但是也许要设计到脚本，那就脱离了简单提交review的初衷了。后期可以对其进行优化。
+
+如果愿意无视以上问题，现在的rbtools已经值得一用了~~
