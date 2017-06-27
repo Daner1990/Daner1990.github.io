@@ -90,3 +90,37 @@ Review request #163145 posted.
 在考虑加密的形式来写入空格，换行符。但是也许要设计到脚本，那就脱离了简单提交review的初衷了。后期可以对其进行优化。
 
 如果愿意无视以上问题，现在的rbtools已经值得一用了~~
+
+## 碰到的问题
+
+在运行ALIASES中pt命令的途中遇到`cannot create process`的问题，rbtools是基于python的东西，这个主要是python系统的问题
+
+我们在安装rbtools的时候实际上是会自带一套python环境
+
+我们需要做的是把python对应到我们安装的rbtools的python环境中
+
+具体变动在安装的rbtools目录下：
+
+>C:\Program Files (x86)\RBTools\Python27\Scripts\rbt-script.py
+
+{% highlight  python %}
+#!C:\Program Files (x86)\RBTools\Python27\python.exe
+# EASY-INSTALL-ENTRY-SCRIPT: 'RBTools==0.7.10','console_scripts','rbt'
+__requires__ = 'RBTools==0.7.10'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('RBTools==0.7.10', 'console_scripts', 'rbt')()
+    )
+
+{% endhighlight %}
+
+把python.exe的注释
+
+>#!C:\src\rbtools\build\windows-pkg\build\Python27\python.exe
+
+变更为代码中python.exe实际对应的位置即可
