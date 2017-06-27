@@ -123,4 +123,6 @@ if __name__ == '__main__':
 
 >#!C:\src\rbtools\build\windows-pkg\build\Python27\python.exe
 
-变更为代码中python.exe实际对应的位置即可
+变更为代码中python.exe实际对应的位置即可，以下为我的实际位置
+
+>#!C:\Program Files (x86)\RBTools\Python27\python.exe
