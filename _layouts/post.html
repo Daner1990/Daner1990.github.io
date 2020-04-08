@@ -1,39 +1,6 @@
 ---
-layout: default
+layout: layout
 ---
 
-<article class="detail-post">
-  <h1 class="title">{{ page.title }}</h1>
-  <div class="date">
-  	{{ page.date | date: "%Y-%m-%d" }} 
-    {% if page.categories.size != 0 %}
-    <span class="space"> | </span><span class="tags">分类:</span>
-          <span class="tags-list">
-                  {% for category in page.categories %}
-                          <a href="{{site.baseurl}}/categories/#{{category}}" title="{{category}}">{{category}}</a>
-                  {% endfor %}
-          </span>
-    {% endif %}
-  	{% if page.tags.size != 0 %}
-  	<span class="space"> | </span><span class="tags">标签:</span>
-          <span class="tags-list">
-                  {% for tag in page.tags%}
-                          <a href="{{site.baseurl}}/tags/#{{tag}}" title="{{tag}}">{{tag}}</a>
-                  {% endfor %}
-          </span>
-  	{% endif %}
-
-  </div>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="pagePervious pageNext">
-    <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
-    &nbsp;&nbsp;&nbsp;
-    <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
-  </div>
-
-  {% include disqus.html %}
-</article>
+{% assign __ = site.data.languages[site.language] %}
+{% include post.html %}
