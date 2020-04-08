@@ -8,7 +8,7 @@ pid: 201505110000
 description: javascript中函数调用方法，具体内部是怎么实现调用的呢，对call,apply,bind的理解
 ---
 
-####Function Invocation
+## Function Invocation
 
 {% highlight javascript linenos %}
 
@@ -23,7 +23,7 @@ description: javascript中函数调用方法，具体内部是怎么实现调用
 
 {% endhighlight %}
 
-####简单的函数调用
+## 简单的函数调用
 
 {% highlight javascript linenos %}
 
@@ -42,7 +42,7 @@ description: javascript中函数调用方法，具体内部是怎么实现调用
 
 {% endhighlight %}
 
-#### 函数指令的理解(function invocation)
+## 函数指令的理解(function invocation)
 
 >一个函数指令例如：fn(...args) 等价于 fn.call(window [ES5-strict: undefined], ...args).
 >
@@ -67,7 +67,7 @@ description: javascript中函数调用方法，具体内部是怎么实现调用
 
 {% endhighlight %}
     
-#### 使用 Function.prototype.bind
+## 使用 Function.prototype.bind
 
 有时为了方便对函数中的常量进行引用
 
@@ -90,4 +90,4 @@ description: javascript中函数调用方法，具体内部是怎么实现调用
 {% endhighlight %}
 -----------------------------
 
-######[参考文档](http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
+###### [参考文档](http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)

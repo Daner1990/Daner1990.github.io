@@ -8,7 +8,7 @@ pid: 201505180001
 description: 对同源策略：same-orgin policy简单的介绍
 ---
 
-###同源策略：same-orgin policy
+### 同源策略：same-orgin policy
 
 >名词解释
 >
@@ -67,7 +67,7 @@ JSONP属于跨域读，且形式限制为get请求，
 安全隐患（容易受到csrf攻击，csrf的解决必须是post请求配合token使用）。
 
 
-###那么，如何实现跨域post请求呢？
+### 那么，如何实现跨域post请求呢？
 
 >解决方案
 >>1、CORS
@@ -78,7 +78,7 @@ JSONP属于跨域读，且形式限制为get请求，
 >>
 >>4、flash proxy
 
-####1、CORS
+#### 1、CORS
 
 概述：Cross-Origin Resource
 
@@ -106,7 +106,7 @@ ie8提供了封装好的XDomainRequest对象，部分实现了该标准；
 
 注意：若在多个iframe之间跨域通信，优先考虑 window.postMessage
 
-####2、invisible iframe
+#### 2、invisible iframe
 
 概述：通过js动态生成不可见表单和iframe，
 
@@ -128,13 +128,13 @@ ie8提供了封装好的XDomainRequest对象，部分实现了该标准；
 
 缺点：依赖hack实现，响应数据量大时需要切片、多次设置fragment并轮询，响应频繁时可能失效。
 
-####3、server proxy 
+#### 3、server proxy 
 
 概述：当前域实现一个代理，所有向外部域名发送的请求都径由该代理中转。
 
 缺点：每个使用方都需要部署代理，数据中转低效，对js有侵入。
 
-####4、flash proxy
+#### 4、flash proxy
 
 概述：利用不可见的swf跨域post提交数据，需要部署crossdomain.xml。例如alirte会自动检测，若用户安装了flash，则以此实现跨域通信。
 

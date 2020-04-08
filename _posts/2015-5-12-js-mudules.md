@@ -8,7 +8,7 @@ pid: 201505120000
 description: javascript 模块化编程,简单的了解两种模块化模式CommonJS和AMD
 ---
 
-#####1. 基本javascript模块编程
+### 1. 基本javascript模块编程
 
 直接在全局中定义函数。这样会造成全局污染并且要以防同名现在出现。
 
@@ -17,7 +17,7 @@ description: javascript 模块化编程,简单的了解两种模块化模式Comm
 定义立即执行匿名函数。保证内部变量的私有性。
 
 
-#####2.规范的模块开发
+### 2.规范的模块开发
 
 代码模块化很重要，有了模块我们才能方便的使用别人的代码。
 
@@ -28,7 +28,7 @@ description: javascript 模块化编程,简单的了解两种模块化模式Comm
 现在有两个模块规范：commonjs 和 amd 模块规范。
 
 
-#####3.commonJS
+### 3.commonJS
 
 09年，美国程序员创造了nodejs 将js语言用于服务端编程
 
@@ -58,7 +58,7 @@ nodejs的模块系统是参照commonjs规范实现的
 等待时间取决网络快慢。时间过长会导致浏览器处于假死状态。所以不能使用同步加载
 
 
-#####4.AMD
+### 4.AMD
 
 为了解决以上问题。amd模块规范诞生了。asynchronous module definition 异步模块定义
 

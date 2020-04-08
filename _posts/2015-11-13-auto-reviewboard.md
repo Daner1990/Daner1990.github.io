@@ -8,7 +8,7 @@ pid: 201511131512
 description: 通过RBTool工具直接pre review代码
 ---
 
-##背景
+## 背景
 
 我们现在的项目开发流程是首先提交代码到reviewboard，查看代码，代码合格，ship it！
 然后再通过svn提交到服务器的流程。
@@ -27,7 +27,7 @@ description: 通过RBTool工具直接pre review代码
 
 在此基础上，我想做的是通过脚本完成以上所有步骤。此为背景
 
-##安装相关软件
+## 安装相关软件
 
 >Python
 
@@ -72,7 +72,7 @@ The current directory does not contain a checkout from a supported source code r
 
 现在也可以直接在reviewboard官网下载`RBTool`。不需要单独安装python和easy_install，rbtool中自带了python。
 
-##配置
+## 配置
 
 >[指定reviewboard服务器](https://www.reviewboard.org/docs/rbtools/dev/rbt/configuration/repositories/#rbtools-repo-config)
 
