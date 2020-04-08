@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [工具]
 tags: [工具,Git,SSH,HTTPS]
 pid: 201510091621
+description: 以前的自己真年轻，现在觉得是常识的东西，也是以前一点一滴的记录呀 2020年初留
 ---
 
 最近在用<code>Git Bash</code> ，<code>Ubuntu Shell</code>提交代码到<code>Git</code>上，每次都需要输入用户名&密码。

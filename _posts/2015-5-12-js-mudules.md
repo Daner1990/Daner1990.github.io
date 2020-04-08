@@ -5,6 +5,7 @@ my_excerpt: javascript 模块化编程,简单的了解两种模块化模式Commo
 categories: [Javascript]
 tags: [Javascript,模块化编程]
 pid: 201505120000
+description: javascript 模块化编程,简单的了解两种模块化模式CommonJS和AMD
 ---
 
 #####1. 基本javascript模块编程

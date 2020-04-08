@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [Javascript]
 tags: [Javascript,React]
 pid: 201510221412
+description: 15年学了react，这么早呀
 ---
 
 **<span style="color:#dd0000">1. 安装`React`环境</span>**

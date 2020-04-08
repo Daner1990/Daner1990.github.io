@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [Movies]
 tags: [Movies,India]
 pid: 201511091512
+description: 上帝恩赐 命运天定 希望之光 普照我身 坚毅如钢 永往直前 而今伊始 命途自闯
 ---
 
 最近看了几部印度电影：

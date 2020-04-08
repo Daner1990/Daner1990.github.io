@@ -5,6 +5,7 @@ my_excerpt: Jekyll 是一个简单的博客形态的静态站点生产机器。�
 categories: [Jekyll]
 tags: [Jekyll]
 pid: 201403030000
+description: Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。
 ---
 
 <p>

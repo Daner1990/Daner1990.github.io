@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [Javascript]
 tags: [Javascript,React]
 pid: 201510261512
+description: React中一个组件就是一个状态机。对于特定的输入，总会返回一致的输出。 整个生命周期分三个阶段，并且在每个阶段都有简单的API可调用
 ---
 
 #简介

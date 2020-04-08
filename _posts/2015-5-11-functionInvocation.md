@@ -5,6 +5,7 @@ my_excerpt: javascript中函数调用方法，具体内部是怎么实现调用�
 categories: [Javascript]
 tags: [Javascript,Web]
 pid: 201505110000
+description: javascript中函数调用方法，具体内部是怎么实现调用的呢，对call,apply,bind的理解
 ---
 
 ####Function Invocation

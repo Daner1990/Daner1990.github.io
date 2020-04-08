@@ -5,6 +5,7 @@ my_excerpt: 如题！
 categories: [工具]
 tags: [Windows,Ruby]
 pid: 201510101500
+description: 在官网下载个ruby。在安装的时候，请勾选Add Ruby executables to your PATH这个选项，添加环境变量，不然以后使用编译软件的时候会提示找不到ruby环境！需要自己再去环境变量中进行配置。
 ---
 
 在之前的文章中，我们通过`linux`命令行直接安装`ruby`，并通过`gem`安装了`jekyll`和`sass`等软件。我已经习惯了快捷的`linux 安装模式`，已经很少在`windows`配置环境，新公司的默认系统都是`windows`,虽然可以装虚拟机。但也要对windows环境熟悉熟悉了。

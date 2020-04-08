@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [Javascript]
 tags: [Javascript,React]
 pid: 201511061512
+description: 当一个组件更新的时候，无论是设置新的props 还是调用setState或者forceUpdate方法，React都会调用该组件的所有子组件的render方法。在大部分情况并没有太大问题。但是如果我们的组件树深度嵌套或者是render方法十分复杂的页面上，这会带来延迟
 ---
 
 #性能优化

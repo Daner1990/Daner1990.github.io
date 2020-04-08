@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [工具]
 tags: [highlight,jekyll,git]
 pid: 201510151608
+description: 错误总提示highlight没有关闭。经查资料在jekyll 1.+版本中出现过改问题，bug连接; 提示没有关闭的原因是highlight包裹的相关代码中有crlf & lf 及回车和换行。把代码中的所有换行去掉变没有错误。 但是这个问题在我其他的blog中并没有出现。暂时不知道是什么原因导致了此不一致性。
 ---
 
 这几天在把之前Blog的文章Copy过来，在导入一片全代码的文章时出现了以下错误

@@ -4,6 +4,7 @@ title: IOS中唤起native app
 my_excerpt: 。
 categories: [web]
 tags: [web,微信,Javascript,]
+description: 在ios9出来以后，我们发现越来越多的应用能够直接绕过微信的屏蔽，从其内置浏览器中直接唤起app。相比于通过弹窗提示让用户到浏览器中操作的方式，这无疑是极大的提高了用户体验与流量导入。因此，在ios上实现直接从微信中唤起app变得非常必要。而其中的关键，就在于通用链接·universal links·：一种能够方便通过传统HTTP链接来启动app的方式，可以通过相同的网址打开网站和app
 pid: 201702170000
 ---
 

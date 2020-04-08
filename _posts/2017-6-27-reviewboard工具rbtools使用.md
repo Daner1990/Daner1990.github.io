@@ -1,6 +1,7 @@
 ---
 layout: post
 title: reviewboard工具rbtools使用
+description: RBTool新版本支持ALIASES，支持自定义命令，只要在reviewboardrc文件中进行简单的配置就可以实现一条命令直接发布代码审计。
 my_excerpt: 。
 categories: [tools]
 tags: [tools,svn]

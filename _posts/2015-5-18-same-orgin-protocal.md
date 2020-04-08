@@ -5,6 +5,7 @@ my_excerpt: 同源策略
 categories: [Javascript]
 tags: [Javascript,跨域,同源策略]
 pid: 201505180001
+description: 对同源策略：same-orgin policy简单的介绍
 ---
 
 ###同源策略：same-orgin policy

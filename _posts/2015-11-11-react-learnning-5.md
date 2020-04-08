@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [Javascript]
 tags: [Javascript,React]
 pid: 201511111512
+description: 测试的类型和工具
 ---
 
 ##测试的类型

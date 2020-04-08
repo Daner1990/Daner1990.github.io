@@ -5,6 +5,7 @@ my_excerpt: 直接看文章吧少年！
 categories: [工具]
 tags: [工具,boardreview,svn]
 pid: 201511131512
+description: 通过RBTool工具直接pre review代码
 ---
 
 ##背景
