@@ -94,7 +94,7 @@ target.onload = () => {
 
 
 
-##基础方案
+## 基础方案
 
 ------
 
@@ -743,4 +743,4 @@ function createBaseCanvas(scale) {
 
 本文基于`html2canvas`和`canvas2image`，从快照的内容完整性、清晰度和转换效率等多个方面，介绍了前端页面生成高质量快照的解决方案。
 
-由于实际应用的复杂性，以上方案可能无法覆盖到每一处具体场景，欢迎大家交流和探讨。
+reffer：https://segmentfault.com/a/1190000021275782
