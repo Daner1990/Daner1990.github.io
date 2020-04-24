@@ -38,7 +38,7 @@ browserify -t babelify main.js -o bundle.js
 
 我们从一段很基础的HTML中对react进行一个整体的理解：
 
-{% highlight html linenos %}
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,7 +91,7 @@ browserify -t babelify main.js -o bundle.js
 	</script>
 </body>
 </html>
-{% endhighlight %}
+```
 
 a. 代码最开始加载三个库，`react`是React的核心库，`react-dom`提供与DOM相关的功能，`browser`将`jsx`语法转化为javascript语法，这一步往往在服务器上完成。
 
