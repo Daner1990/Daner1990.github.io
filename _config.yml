@@ -214,8 +214,12 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  GitHub: https://github.com/Daner1990
+  JueJin: https://juejin.im/user/5d118a07e51d4556dc29365d
+  Weibo: https://github.com/Daner1990
+  Twitter : https://github.com/Daner1990
+  Facebook : https://github.com/Daner1990
 
 
 # Social Links Icons
@@ -230,6 +234,8 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  JueJin: compass
+  Facebook: facebook
 
 
 # Sidebar Avatar
@@ -282,11 +288,11 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+links_title: Links
+links_layout: block
+links_layout: inline
+links:
+  yangbingdong: https://yangbingdong.com/2017/build-blog-hexo-advanced/
 
 
 # ---------------------------------------------------------------

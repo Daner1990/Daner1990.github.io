@@ -5,7 +5,8 @@
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom-color: $black-light;
+  // border-bottom-color: $black-light;
+  border-bottom-color: transparent;
   font-size: 13px;
 
   &:before {
@@ -16,6 +17,6 @@
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
+    // background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
   }
 }
