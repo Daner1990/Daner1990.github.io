@@ -5,7 +5,7 @@ my_excerpt: 。
 categories: [plugins]
 tags: [vue,plugins]
 description: 将网页保存为图片（以下简称为快照），是用户记录和分享页面信息的有效手段，在各种兴趣测试和营销推广等形式的活动页面中尤为常见。我们采用html2canvas作为工具进行截图，然而截图极度模糊。
-pid: 201706280000
+pid: 201706280200
 
 ---
 
