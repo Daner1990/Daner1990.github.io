@@ -217,6 +217,7 @@ font:
 social:
   GitHub: https://github.com/Daner1990
   JueJin: https://juejin.im/user/5d118a07e51d4556dc29365d
+  JianShu: https://www.jianshu.com/u/cbd2df89d568
   Weibo: https://github.com/Daner1990
   Twitter : https://github.com/Daner1990
   Facebook : https://github.com/Daner1990
@@ -232,6 +233,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  JianShu: compass
   Twitter: twitter
   Weibo: weibo
   JueJin: compass
